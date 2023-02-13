@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".ova * ").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>
+    <meta charset="utf-8">
+    <title>My web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      
+        h2{
+            font-size: 40px;
+            font-style: italic;
+            background-color: black;
+            color: white;
+        }
+            
+        .header {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: 100% 120px;
+  padding: 20px;
+  text-align:left;
+}
+
+        body {
+            
+            margin: 0;
+        }
+        
+        .topnav {
+            overflow: hidden;
+            background-color:black;
+        }
+        .topnav a{
+            float: left;
+            display: block;
+            color:white;
+            text-align: center;
+            padding: 15px 17px;
+            text-decoration:wavy;
+        }
+        .dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 17px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+        .topnav a:hover, .dropdown:hover .dropbtn {
+            background-color:burlywood;
+            color: black;
+        }
+        .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:burlywood;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+        .topnav .search-container{
+            float:right;
+        }
+        img {
+            display: block;
+            border:3px solid black;
+            width:450px;
+            height:300px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        
+        .topnav input[type=text]{
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border:none;
+        }
+        .topnav .search-container button{
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        .topnav .search-container button:hover {
+            background: #ccc;
+        }
+        @media screen and (max-width: 600px) {
+            .topnav .search-container{
+                float: none;
+            }
+        .topnav a,.topnav input[type=text], .topnav .search-container button{
+            float: none;
+            display:block;
+            text-align: left;
+            width: 100%;
+            margin: 0;
+            padding: 14px;
+        }
+        .topnav input[type=text] {
+            border: 1px solid #ccc;
+        }
+        }
+        .kiki{
+            text-align: center;
+            font-size: 250%;
+        }
+        #myInput{
+  
+  margin-left: 75%;
+  color: black;
+  border: black solid;
+  font-size: 20px;
+
+}
+  
+    </style>
+
+
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">AboutMe</a>
+        <div class="dropdown">
+            <button class="dropbtn">FT
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+            <a href="music.html">Music</a>
+            <a href="places.html">Places</a>
+            <a href="movies.html">Movies</a>
+          </div>
+        </div>
+        <a href="galery.html">Galery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="muzika">
+        
+        <h3 class="kiki">Омилени артисти и песни </h3>
+        <input id="myInput" type="text" placeholder="Search..">
+        <div class="ova">
+        <h2>Travis Scott</h2>
+        <img src="Travis.png" width="20" height="50" alt="Travis Scott">
+        <br>
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/_EyZUTDAH0U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/tfSS1e3kYeo?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/Dst9gZkq1a8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/qAlF70MdfwU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/RH9kl6XZixo?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="ova">
+        <h2><strong>Drake</strong></h2>
+        <img src="drake1.png" width="200" height="200" alt="Drake">
+        <br>
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/xpVfcZ0ZcFM?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/vX9msKu75qs?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/uxpDa-c-4Mc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/vMGpBAOD2CI?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/DRS_PpOrUZ4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>  
+        <div class="ova">
+          <h2><strong>Pop Smoke</strong></h2>
+        <img src="pop.png" width="200" height="200" alt="Pop Smoke">
+        <br>
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/Q9pjm4cNsfc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/EZkNUmVXg6U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/Bo5hepNudl0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/9dPiZwLnAMY?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/uuodbSVO3z0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>

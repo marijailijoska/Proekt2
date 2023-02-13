@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>My web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        .header {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: 100% 120px;
+  padding: 20px;
+  text-align:left;
+}
+
+        body {
+            
+            
+  background-color: white;
+  height: 1620px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  position: relative;
+            
+            margin: 0;
+        }
+        
+        .topnav {
+            overflow: hidden;
+            background-color:black;
+        }
+        .topnav a{
+            float: left;
+            display: block;
+            color:white;
+            text-align: center;
+            padding: 15px 17px;
+            text-decoration:wavy;
+        }
+        .dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 17px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+        .topnav a:hover, .dropdown:hover .dropbtn {
+            background-color:white;
+            color: black;
+        }
+        .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:rgb(255, 255, 255);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+        .topnav .search-container{
+            float:right;
+        }
+        
+        
+        .topnav input[type=text]{
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border:none;
+        }
+        .topnav .search-container button{
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        .topnav .search-container button:hover {
+            background: #ccc;
+        }
+        @media screen and (max-width: 600px) {
+            .topnav .search-container{
+                float: none;
+            }
+        .topnav a,.topnav input[type=text], .topnav .search-container button{
+            float: none;
+            display:block;
+            text-align: left;
+            width: 100%;
+            margin: 0;
+            padding: 14px;
+        }
+        .topnav input[type=text] {
+            border: 1px solid #ccc;
+        }
+        }
+        h2{
+            
+            font-size: 50px;
+           
+            color: black;
+            text-align: center;
+        }
+        summary{
+            color:#333;
+
+        }
+       
+        
+  
+    </style>
+    <script>
+        var i=1,i1=1,i2=1,i3=1;
+       
+        function start(){
+            var like = document.querySelector('.center #like');
+            var like1 = document.querySelector('.center #like1');
+            var like2 = document.querySelector('.center #like2');
+            var button=document.querySelector('.center #button');
+            var button1=document.querySelector('.center #button1');
+            var button2=document.querySelector('.center #button2');
+            like.addEventListener("click",incrementLikes,false);
+            like1.addEventListener("click",incrementLikes1,false);
+            like2.addEventListener("click",incrementLikes2,false);
+            button.addEventListener("click",typeComment,false);
+            button1.addEventListener("click",typeComment1,false);
+            button2.addEventListener("click",typeComment2,false);
+            var number=document.getElementById("number");
+            var comment=document.getElementById("comment");
+           
+        
+        function incrementLikes()
+        {
+          number.innerHTML=i;
+          i++;
+        }
+        function incrementLikes1()
+        {
+          number1.innerHTML=i1;
+          i1++;
+        }
+        function incrementLikes2()
+        {
+          number2.innerHTML=i2;
+          i2++;
+        }
+        function typeComment()
+        {
+            
+            var today = new Date();
+             var dd = String(today.getDate()).padStart(2, '0');
+             var mm = String(today.getMonth() + 1).padStart(2, '0'); 
+             var yyyy = today.getFullYear();
+             
+              today = dd + '.' + mm + '.' + yyyy;
+            
+           
+             var comments=document.querySelector('.center #comments');
+             var list_item = document.createElement ("l1");
+             list_item.innerHTML ="<p>"+ comment.value + Array(30).fill('\xa0').join('') +" <label style='font-size: 0.7em'>" + today +  "</label>"+ "</p>";
+               comments.append(list_item); 
+               comment.value="";
+               
+
+}
+function typeComment1()
+        {
+            
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); 
+            var yyyy = today.getFullYear();
+             today = dd + '.' + mm + '.' + yyyy; 
+            var comments1=document.querySelector('.center #comments1');
+             var list_item1 = document.createElement ("l2");
+             list_item1.innerHTML ="<p>"+ comment1.value + Array(30).fill('\xa0').join('') +" <label style='font-size: 0.7em'>" + today +  "</label>"+ "</p>";
+               comments1.append(list_item1); 
+               comment1.value="";
+}
+function typeComment2()
+        {
+            
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); 
+            var yyyy = today.getFullYear();
+           today = dd + '.' + mm + '.' + yyyy;
+            var list_item = document.createElement ("l1");
+            var comments2=document.querySelector('.center #comments2');
+            list_item.innerHTML ="<p>"+ comment2.value + Array(30).fill('\xa0').join('') +" <label style='font-size: 0.7em'>" + today +  "</label>"+ "</p>";
+               comments2.append(list_item);
+               comment2.value="";
+}
+        }
+window.addEventListener("load",start,false);
+
+    </script>
+    
+
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">AboutMe</a>
+        <div class="dropdown">
+            <button class="dropbtn">FT
+                
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+            <a href="music.html">Music</a>
+            <a href="places.html">Places</a>
+            <a href="movies.html">Movies</a>
+          </div>
+        </div>
+        <a href="galery.html">Galery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <p> </p>
+    <p> </p>
+    <h2 class="text">Gallery</h2>
+    <div class="center">
+    <ul id="lista">  
+        <div id="result"><img src="paraglajder.png" alt="slika1" height="360" width="600">
+        <p><input id="comment" type="text" placeholder="Enter your comment here"><input id="button" type="button" value="enter">
+            <label id="like"><i class="fa fa-heart"></i></label><label id="number">0</label></p>
+            <details>
+           <summary>Tap to see coments</summary> 
+           <ul id="comments"></ul>
+           </details>
+           <br> <br>
+        </div>
+        
+
+
+
+         <div><img src="k2.jpg" alt="slika1" width="450" height="500">
+            <p><input id="comment1" type="text" placeholder="Enter your comment here"><input id="button1" type="button" value="enter">
+                <label id="like1"><i class="fa fa-heart"></i></label><label id="number1">0</label></p>
+                
+                <details>
+                    <summary>Tap to see coments</summary> <br>
+                    <ul id="comments1"></ul><br>
+                    </details>
+                    <br> <br>
+         </div>
+
+
+
+               <div> <img src="winter.jpg" alt="slika1" width="500" height="360">
+                <p><input id="comment2" type="text" placeholder="Enter your comment"><input id="button2" type="button" value="enter">
+                    <label id="like2"><i class="fa fa-heart"></i></label><label id="number2">0</label></p>
+                    <details>
+                        <summary>Tap to see coments</summary> 
+                        <ul id="comments2"></ul>
+                        </details>
+                </ul>
+                 
+         </ul>
+    </div> 
+   
+
+
+    </div>
+
+    
+    </div>
+</body>

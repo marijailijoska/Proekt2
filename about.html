@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $("h1").click(function(){
+            $("h1").addClass("k1");
+          });
+
+          $("h1").click(function(){
+            $("p").fadeIn(1200);
+            $(".mar").fadeIn(1200);
+          });
+        
+        });
+        </script>
+    <meta charset="utf-8">
+    <title>My web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .header {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: 100% 120px;
+  padding: 20px;
+  text-align:left;
+}
+
+   .k1{
+        background-color: white;
+        color: rgb(154, 86, 86);
+        text-align: center;
+        font-size: 60px;
+
+   }
+  .tx
+  {
+    display: none;
+    color: rgb(154, 86, 86);
+    position: relative;
+    text-align: left;
+    font-size: 25px;
+    bottom: 360px;
+    left: 600px;
+  }
+     h1
+     {
+      
+      background-color:rgb(154, 86, 86); ;
+       color: white;
+        text-align: center;
+        font-size: 60px;
+        
+     }
+        .mar
+        {
+          display: none;
+            width: 18%;
+            height: 18%;
+            margin-left: 300px;
+            margin-top: 20px;
+
+        }
+        
+        .topnav {
+            overflow: hidden;
+            background-color:rgb(154, 86, 86);;
+        }
+        .topnav a{
+            float: left;
+            display: block;
+            color:white;
+            text-align: center;
+            padding: 15px 17px;
+            text-decoration:wavy;
+        }
+        .dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 17px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+        .topnav a:hover, .dropdown:hover .dropbtn {
+            background-color:rgb(255, 255, 255);
+            color: black;
+        }
+        .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:rgb(255, 255, 255);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+        .topnav .search-container{
+            float:right;
+        }
+        img {
+            display: block;
+            border:5px solid rgb(154, 86, 86);;
+            width:60%;
+            height:600px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        
+        .topnav input[type=text]{
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border:none;
+        }
+        .topnav .search-container button{
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        .topnav .search-container button:hover {
+            background: #ccc;
+        }
+        @media screen and (max-width: 600px) {
+            .topnav .search-container{
+                float: none;
+            }
+        .topnav a,.topnav input[type=text], .topnav .search-container button{
+            float: none;
+            display:block;
+            text-align: left;
+            width: 100%;
+            margin: 0;
+            padding: 14px;
+        }
+        .topnav input[type=text] {
+            border: 1px solid #ccc;
+        }
+        }
+
+        body{
+            background-image: url("pinkk2.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+  
+    </style>
+
+
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">AboutMe</a>
+        <div class="dropdown">
+            <button class="dropbtn">FT
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+            <a href="music.html">Music</a>
+            <a href="places.html">Places</a>
+            <a href="movies.html">Movies</a>
+          </div>
+        </div>
+        <a href="galery.html">Galery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <br>
+  
+     <h1>About me</h1>
+     
+    <img class="mar" src="mar.jpg">
+    <p class="tx">City in the clouds,also the highest one in the Balkan is my hometown,place where<br>
+                  I was born.I am an ordinary student of electronic engineering currently living <br>
+                  in Skopje.As a mountain girl i like spending time in nature and capture all<br>
+                  the wonderful moments of beauty.I like learning new skills and recently I have<br>
+                  been interested in exploring different languages as they help me explore new<br>
+                  cultures around the world. I started learning Korean online and I have already<br>
+                  cleared the beginner level.I generally spend my weekends watching K-dramas,<br>
+                  playing volleyball and partying till morning.Every year I look forward to exploring<br>
+                  new places and catching up on some lifetime memories.In future i am planning<br>
+                  to work and live in Seoul.<br>
+                  </p>
+
+   
+    
+    </div>
+</body>

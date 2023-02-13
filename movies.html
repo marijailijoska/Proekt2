@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".ova .column  ").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+    <meta charset="utf-8">
+    <title>My web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .header {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: 100% 120px;
+  padding: 20px;
+  text-align:left;
+}
+  #myInput{
+  
+    margin-left: 75%;
+    color: black;
+    border: black solid;
+    font-size: 20px;
+
+  }
+   .divche,h3{
+    font-style: italic;
+            background-color: rgb(4, 2, 0);
+            color: white;
+            font-size: 40px;
+          
+   }
+        body {
+           
+            margin: 0;
+            
+        }
+        .kiki{
+            text-align: center;
+            font-size: 250%;
+        }
+        .topnav {
+          overflow: hidden;
+            background-color:black;
+        }
+        .topnav a{
+            float: left;
+            display: block;
+            color:white;
+            text-align: center;
+            padding: 15px 17px;
+            text-decoration:wavy;
+        }
+        .dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 17px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+        .topnav a:hover, .dropdown:hover .dropbtn {
+            background-color:burlywood;
+            color: black;
+        }
+        .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:burlywood;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+        .topnav .search-container{
+            float:right;
+        }
+        img {
+          display: block;
+            border:3px solid #555;
+            
+            
+        }
+        
+        .topnav input[type=text]{
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border:none;
+        }
+        .topnav .search-container button{
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        .topnav .search-container button:hover {
+            background: #ccc;
+        }
+        @media screen and (max-width: 600px) {
+            .topnav .search-container{
+                float: none;
+            }
+        .topnav a,.topnav input[type=text], .topnav .search-container button{
+            float: none;
+            display:block;
+            text-align: left;
+            width: 100%;
+            margin: 0;
+            padding: 14px;
+        }
+        .topnav input[type=text] {
+            border: 1px solid #ccc;
+        }
+        }
+        
+        html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+  
+    </style>
+
+
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">AboutMe</a>
+        <div class="dropdown">
+            <button class="dropbtn">FT
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+            <a href="music.html">Music</a>
+            <a href="places.html">Places</a>
+            <a href="movies.html">Movies</a>
+          </div>
+        </div>
+        <a href="galery.html">Galery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+
+    </div>
+    <h1 class="kiki">MOVIES</h1>
+    
+<div class="ova">
+    <div class="divche"><h3><b>Twilight</b></h3></div> <input id="myInput" type="text" placeholder="Search..">
+    
+    <a href="https://www.imdb.com/title/tt1099212/"><img src="twilight.png" width="200" height="250"></a>
+    <br>
+    <h2><b>CAST</b></h2>
+
+  <br>
+
+ <div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="edward.png" alt="Edward" style="width:70%">
+      <div class="container">
+        <h2>Robert Pattinson</h2>
+        <p class="title">Actor</p>
+        <p>Robert Pattinson as Edward Cullen, a 108-year-old vampire who was changed in 1918 and still appears to be seventeen. He is Bella's love interest and eventually falls in love with her. He has the ability to read minds, with the exception of Bella's, along with superhuman speed.</p>
+        
+        
+        <p><a href="https://en.wikipedia.org/wiki/Robert_Pattinson"><button class="button">More About</button></a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="bella.png" alt="bella" style="width:70%">
+      <div class="container">
+        <h2>Kristen Stewart</h2>
+        <p class="title">Actress</p>
+    
+        <p>Kristen Stewart as Bella Swan, a seventeen-year-old girl who moves to the small town of Forks, Washington from Phoenix, Arizona and falls in love with Edward Cullen, a vampire. Her life is endangered after James, a sadistic vampire, decides to hunt her.</p>
+        <p><a href="https://en.wikipedia.org/wiki/Kristen_Stewart"><button class="button">More About</button></a></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="jacob.png" alt="jacob" style="width:70%">
+      <div class="container">
+        <h2>Taylor Lautner</h2>
+        <p class="title">Actor</p>
+        <p>Jacob is given a small role in the first book of the series.When Bella uses him to get information on Edward Cullen and his family, Jacob tells her superstitious Quileute legends and introduces her to the idea that Edward is a vampire. </p>
+        
+        <p><a href="https://en.wikipedia.org/wiki/Taylor_Lautner"><button class="button">More About</button></a></p>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>  
+<div class="ova">
+    <br>
+    <h3><b>Better days</b></h3>
+    <a href="https://www.imdb.com/title/tt9586294/?ref_=tt_mv_close"><img src="better days.png" width="200" height="300"></a>    
+    </div>
+    <br>
+    <h2><b>CAST</b></h2>
+    
+    <div class="column">
+        <div class="card">
+          <img src="zhou.png" alt="zhou" style="width:100%">
+          <div class="container">
+            <h2>Dongyu Zhou</h2>
+            <p class="title">Actress</p>
+            <p>Dongyu Zhou as Chen Nian.The female protagonist, a 12th grader who gets bullied by a group of girls led by Wei Lai after being interrogated by the police regarding Hu Xiaodie's suicide. She later becomes close to Xiao Bei, insisting on making their future better together.</p>
+            
+            <p><a href="https://en.wikipedia.org/wiki/Zhou_Dongyu"><button class="button">More About</button></a></p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <img src="yee.png" alt="yee" style="width:100%">
+          <div class="container">
+            <h2>Jackson Yee</h2>
+            <p class="title">Actor</p>
+            <p>Jackson Yee as Liu Beishan (aka "Xiao Bei"). The male protagonist who starts off as a street thug but ends up protecting Chen Nian from bullies and falling in love with her in their later encounters. He also takes the blame for several crimes in order to free Chen Nian of criminal charges.</p>
+             <br>
+             
+            <p><a href="https://en.wikipedia.org/wiki/Jackson_Yee"><button class="button">More About</button></a></p>
+          </div>
+        </div>
+      </div>
+</div> 
+</body>

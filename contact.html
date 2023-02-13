@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("input").focus(function(){
+      $(this).css("background-color", "#FFFFCC");
+    });
+    $("input").blur(function(){
+      $(this).css("background-color", "lightgray");
+    });
+  });
+  </script>
+    <meta charset="utf-8">
+    <title>My web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .header {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: 100% 120px;
+  padding: 20px;
+  text-align:left;
+}
+
+        body {
+             background-color:#FFFFCC;
+            margin: 0;
+        }
+        
+        .topnav {
+            overflow: hidden;
+            background-color:black;
+        }
+        .topnav a{
+            float: left;
+            display: block;
+            color:white;
+            text-align: center;
+            padding: 15px 17px;
+            text-decoration:wavy;
+        }
+        .dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 17px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+        .topnav a:hover, .dropdown:hover .dropbtn {
+            background-color:burlywood;
+            color: black;
+        }
+        .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:burlywood;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+        .topnav .search-container{
+            float:right;
+        }
+        img {
+            display: block;
+            border:5px solid #555;
+            width:60%;
+            height:600px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        
+        .topnav input[type=text]{
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border:none;
+        }
+        .topnav .search-container button{
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        .topnav .search-container button:hover {
+            background: #ccc;
+        }
+        @media screen and (max-width: 600px) {
+            .topnav .search-container{
+                float: none;
+            }
+        .topnav a,.topnav input[type=text], .topnav .search-container button{
+            float: none;
+            display:block;
+            text-align: left;
+            width: 100%;
+            margin: 0;
+            padding: 14px;
+        }
+        .topnav input[type=text] {
+            border: 1px solid #ccc;
+        }
+        }
+        @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+  background: #FFFFCC;
+}
+
+.wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 350px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 2px rgba(254,236,164,1); 
+}
+
+.wrapper h2{
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #332902;
+}
+
+.wrapper .input_field{
+  margin-bottom: 10px;
+}
+
+.wrapper .input_field input[type="text"],
+.wrapper textarea{
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  padding: 10px;
+}
+
+.wrapper textarea{
+  resize: none;
+  height: 80px;
+}
+
+.wrapper .btn input[type="submit"]{
+  border: 0px;
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  background: gray;
+  color: #332902;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+#error_message{
+  margin-bottom: 20px;
+  background: #fe8b8e;
+  padding: 0px;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.5s ease;
+} 
+</style>
+<script type="text/javascript">
+function validate(){
+  var name = document.getElementById("name").value;
+  var subject = document.getElementById("subject").value;
+  var phone = document.getElementById("phone").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+  var error_message = document.getElementById("error_message");
+  
+  error_message.style.padding = "10px";
+  
+  var text;
+  if(name.length < 5){
+    text = "Please Enter valid Name";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(subject.length < 5){
+    text = "Please Enter Correct Subject";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(isNaN(phone) || phone.length != 9){
+    text = "Please Enter valid Phone Number";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(email.indexOf("@") == -1 || email.length < 6){
+    text = "Please Enter valid Email";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(message.length <= 10){
+    text = "Please Enter More Than 10 Characters";
+    error_message.innerHTML = text;
+    return false;
+  }
+  alert("Form Submitted Successfully!");
+  return true;
+}
+
+</script>
+
+
+</head>
+<body>
+    <div class="topnav">
+        <a href="home.html">Home</a>
+        <a href="about.html">AboutMe</a>
+        <div class="dropdown">
+            <button class="dropbtn">FT
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+            <a href="music.html">Music</a>
+            <a href="places.html">Places</a>
+            <a href="movies.html">Movies</a>
+          </div>
+        </div>
+        <a href="galery.html">Galery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <p> </p>
+    <p> </p>
+    </div>
+    <div class="wrapper">
+        <h2>Contact me</h2>
+        <div id="error_message">
+           
+        </div>
+        <form action="" id="myform" onsubmit = "return validate();">
+          <div class="input_field">
+              <input type="text" placeholder="Name" id="name">
+          </div>
+          <div class="input_field">
+              <input type="text" placeholder="Subject" id="subject">
+          </div>
+          <div class="input_field">
+              <input type="text" placeholder="Phone" id="phone">
+          </div>
+          <div class="input_field">
+              <input type="text" placeholder="Email" id="email">
+          </div>
+          <div class="input_field">
+              <textarea placeholder="Message" id="message"></textarea>
+          </div>
+          <div class="btn">
+              <input type="submit">
+          </div>
+        </form>
+      </div>
+      
+</body>

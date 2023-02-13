@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  
+   $(".hi").click(function(){
+    $(".slikaa").show();
+    
+  });
+
+  $(".hii").click(function(){
+    $(".slikaaa").show();
+
+    
+  });
+});
+</script>
+    <meta charset="utf-8">
+    <title>My web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+    <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+    <style>
+         p{
+            margin: 30px 0px 50px;
+            font-size: 300%;
+            font-family: sans-serif;
+            text-align: center;
+            color: black;
+          
+        }
+        .gallery{
+            margin: 10px 60px;
+        }
+        .gallery img{
+            
+            padding: 5px;
+
+        }
+        .header {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: 100% 120px;
+  padding: 20px;
+  text-align:left;
+}
+
+        body {
+           
+            margin: 0;
+        }
+        
+        .topnav {
+            overflow: hidden;
+            background-color:black;
+        }
+        .topnav a{
+            float: left;
+            display: block;
+            color:white;
+            text-align: center;
+            padding: 15px 17px;
+            text-decoration:wavy;
+        }
+        .dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 17px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+        .topnav a:hover, .dropdown:hover .dropbtn {
+            background-color:burlywood;
+            color: black;
+        }
+        .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:burlywood;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+        .topnav .search-container{
+            float:right;
+        }
+        
+        
+        .topnav input[type=text]{
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border:none;
+        }
+        .topnav .search-container button{
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        .topnav .search-container button:hover {
+            background: #ccc;
+        }
+        @media screen and (max-width: 600px) {
+            .topnav .search-container{
+                float: none;
+            }
+        .topnav a,.topnav input[type=text], .topnav .search-container button{
+            float: none;
+            display:block;
+            text-align: left;
+            width: 100%;
+            margin: 0;
+            padding: 14px;
+        }
+        .topnav input[type=text] {
+            border: 1px solid #ccc;
+        }
+        }
+  
+    </style>
+
+
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">AboutMe</a>
+        <div class="dropdown">
+            <button class="dropbtn">FT
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+            <a href="music.html">Music</a>
+            <a href="places.html">Places</a>
+            <a href="movies.html">Movies</a>
+          </div>
+        </div>
+        <a href="galery.html">Galery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="gallery"></div>
+     <p><span class="hi">⬅</span>Places<span class="hii">➡</span></p> 
+     <a href="japan.png"><img src="japan.png" style="display: none;" id="theImg" class="slikaa" width="300" height="250"></a>
+    <a href="images/a.jpg"  data-lightbox="g" ><img class="slika1" src="images/a-small.png" width="300" height="250"></a>
+        <a href="images/c.jpg"data-lightbox="g"><img src="images/c-small.png" width="300" height="250"></a>
+        <a href="images/d.jpg"data-lightbox="g"><img src="images/d-small.png" width="300" height="250"></a>
+        <a href="images/e.jpg"data-lightbox="g"><img src="images/e-small.png" width="300" height="250"></a>
+        <a href="images/f.jpg"data-lightbox="g"><img src="images/f.jpg" width="300" height="250"></a>
+        <a href="images/g.jpg"data-lightbox="g"><img src="images/g.jpg" width="300" height="250"></a>
+        <a href="images/h.jpg"data-lightbox="g"><img src="images/h.jpg" width="300" height="250"></a>
+        <a href="images/i.jpg"data-lightbox="g"><img src="images/i.jpg" class="slika2" width="300" height="250"></a>
+        <a href="vatican.jpg"><img src="vatican.jpg" style="display: none;" id="theImg" class="slikaaa" width="300" height="250"></a>
+    
+    </div>
+</body>
